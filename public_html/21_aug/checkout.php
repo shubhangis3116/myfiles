@@ -2,7 +2,7 @@
 session_start();
 include('config.php');
 global $conn;
-
+/*yyy*/
 if(isset($_POST['buy']))
 {
 	$stmt=$conn->prepare("INSERT INTO orders(username,date,time,totalcost,quantity) VALUES(?,?,?,?,?)");
