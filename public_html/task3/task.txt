@@ -1,0 +1,3 @@
+1. Create products array with data in HTML.
+2. Read Add To Cart event and add that product to cart array. Make sure no duplicate products, if same product is added to cart increment quantity by 1.
+3. Display cart below page navigation.

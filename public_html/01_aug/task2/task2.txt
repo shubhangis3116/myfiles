@@ -1,0 +1,5 @@
+Create a form to add product to product list. 
+
+How it should work:
+1. Fill form and submit values.
+2. Product should add in product list and display in list below add product form.

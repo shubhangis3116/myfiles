@@ -1,0 +1,38 @@
+#display{
+	padding:10px;
+	margin: 0 auto;
+	background-color: #DB7093;
+	width:40%;
+	border-radius: 18px;
+
+}
+#display th{
+	padding:5px;
+	text-align: center;
+
+}
+#display td{
+	padding: 5px;
+	color: white;
+	margin:8px;
+	text-align: center;
+}
+#brands{
+	border: 2px solid #DB7093;
+	margin-left: 20px;
+	padding:20px;
+	font-size: medium;
+	text-shadow: 5px;
+	border-radius: 8px;
+
+}
+#os{
+	border: 2px solid #DB7093;
+	margin-left: 20px;
+	padding:20px;
+	font-size: medium;
+	border-radius: 8px;
+}
+#wrapper{
+	margin:0px auto;
+}

@@ -1,0 +1,61 @@
+//filter by brand
+
+$('#wrapper').on('change','#brands',function(){
+		var temp=this.value;
+		
+		var html='<table><tr><th>Product_ID</th><th>Product_Name</th><th>Product_Brand</th><th>OS</th></tr>';
+		for(i=0;i<products.length;i++)
+		{
+			if(temp==0)
+			{
+				html+='<tr><td>'+products[i].id+'</td><td>'+products[i].name+'</td><td>'+products[i].brand+'</td><td>'+products[i].os+'</td></tr>';
+			}
+			if(temp==products[i].brand)
+			{
+				html+='<tr><td>'+products[i].id+'</td><td>'+products[i].name+'</td><td>'+products[i].brand+'</td><td>'+products[i].os+'</td></tr>';
+			}
+		}
+		html+='</table>';
+		$('#display').html(html);
+
+	});
+
+	
+});
+
+//filter by OS
+$("#wrapper").on('change','#os', function(){
+  		
+  		var temp2=this.value;
+  		
+  		var html= '<table><tr><th>Product_Id</th><th>Product_Name</th><th>Product_Brand</th><th>OS</th></tr>';
+
+  	     for(var i = 0; i <products.length; i++)
+    	{	
+    		if(temp2==0)
+    		{
+    			html+= '<tr><td>'+products[i].id+'</td><td>'+products[i].name+'</td><td>'+products[i].brand+'</td><td>'+products[i].os+'</td></tr>';	
+    		}
+           if(temp2==products[i].os)
+    		{
+    		html+='<tr><td>'+products[i].id+'</td><td>'+products[i].name+'</td><td>'+products[i].brand+'</td><td>'+products[i].os+'</td></tr>';
+  			}
+  		}	
+  		html+='</table>';
+  		$("#display").html(html);
+  	});
+});
+
+//search
+
+$("#new").append("<input type=text id='search'>");
+
+
+	var html="";
+	html+="<table><tr><th>ID</th><th>name</th><th>Brand</th><th>OS</th></tr>";
+	for(var i=0;i<product.length;i++)
+	{
+		html+="<tr><td>"+product[i].id+"</td><td>"+product[i].name+"</td><td>"+product[i].brand+"</td><td >"+product[i].os+"</td></tr>";
+	}
+	html+="</table>";
+	$("#display").html(html);

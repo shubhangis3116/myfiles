@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+
+<div id="result">
+	
+</div>
+<input type="button" id="clickme" value="click me">
+
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#clickme").click(function(){
+				console.log("Clicked");
+				$('#result').append("clicked");
+			});
+			
+
+
+				
+			});
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+Create a form in HTML and with the help of javascript validate the values entered by user according to following chart:
+
+Age		Recommended Weight
+-----------------------------------------
+5-7		15 - 20KG
+8-10		21 - 25KG
+11-15		26 - 30KG
+16-20		31 - 40KG
+
+In attachment you can see if you are under weight then it shows first message, if overweight then second message and if under recommended range then third message. Use javascript conditions to display proper result.

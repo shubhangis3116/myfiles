@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+</head>
+	<script src="jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	
+</head>
+<body>
+<script  type="text/javascript">
+	$(document).ready(function()
+	{
+		$(".add-to-cart").click(function()
+		{
+
+		$(this).parent().parent().find(".product-meta").find(".in-stock").css("background-color","red");
+		$(this).parent().parent().find(".product-meta").find(".in-stock").val("Out of Stock");
+
+		$.ajax({
+			method: "POST",
+			url: "index.php",
+			data: { id:$(this).data('productid')},
+			dataType: "json"
+
+		})
+		.done(function(msg){
+			var html="";
+			html="<table><tr><th>ID</th><th>Name</th><th>Price</th><th>Image</th><th>Action</th><tr>";
+			for(var i=0; i<msg.length; i++)
+			{
+
+			html+="<tr><td>"+msg[i].id+"</td><td>"+msg[i].name+"</td><td><img src='images/"+msg[i].image+"'></td><td><a href='#' data-productId='"+msg[i].id+"' class='remove'>Remove</a></td></tr>";
+			}
+			html+="</table>";
+			$('#cart').html(html);
+		});
+    
+  });
+	$(document).on('click','.remove',function(d){
+		d.preventDefault();
+
+		$.ajax({
+			url:"index.php",
+			method:"POST",
+			dataType:"json",
+			data: {id:$(this).data("productid")}
+		})
+		.done(function(message){
+			console.log(message);
+			var html="<table><tr><th>ID</th><th>Name</th><th>Price</th><th>Image</th><th>Action</th><tr>";
+
+			for(var i=0; i<message.length; i++)
+			{
+
+			html+="<tr><td>"+message[i].id+"</td><td>"+message[i].name+"</td><td><img src='images/"+message[i].image+"'></td><td><a href='#' data-productId='"+message[i].id+"' class='remove'>Remove</a></td></tr>";
+			}
+			html+="</table>";
+			$('#cart').html(html);
+		});
+
+		});
+	});
+	
+</script>
+	<div id="wrapper">
+		<div id="products">
+			<div class="product">
+				<div class="product-data">
+					<img src="images/basketball.png" class="product-image">
+					<a href="#"><h2 class="product-title">Basket Ball</h2></a>
+					<p>
+						$<span class="product-price">150</span>
+					</p>
+					<input type="button" data-ProductId="101" class="add-to-cart" value="Add To Cart">
+				</div>
+				<div class="product-meta">
+					<input type="button" class="product-availability in-stock" value="In Stock">
+				</div>
+			</div>
+			<div class="product">
+				<div class="product-data">
+					<img src="images/football.png" class="product-image">
+					<a href="#"><h2 class="product-title">Football</h2></a>
+					<p>
+						$<span class="product-price">120</span>
+					</p>
+					<input type="button" data-productId="102" class="add-to-cart" value="Add To Cart">
+				</div>
+				<div class="product-meta">
+					<input type="button" class="product-availability in-stock" value="In Stock">
+				</div>
+			</div>
+			<div class="product">
+				<div class="product-data">
+					<img src="images/soccer.png" class="product-image">
+					<a href="#"><h2 class="product-title">Soccer</h2></a>
+					<p>
+						$<span class="product-price">140</span>
+					</p>
+					<input type="button" data-productId="103" class="add-to-cart" value="Add To Cart">
+				</div>
+				<div class="product-meta">
+					<input type="button" class="product-availability in-stock" value="In Stock">
+				</div>
+			</div>
+			<div class="product">
+				<div class="product-data">
+					<img src="images/table-tennis.png" class="product-image">
+					<a href="#"><h2 class="product-title">Table Tennis</h2></a>
+					<p>
+						$<span class="product-price">130</span>
+					</p>
+					<input type="button" data-productId="104" class="add-to-cart" value="Add To Cart">
+				</div>
+				<div class="product-meta">
+					<input type="button" class="product-availability in-stock" value="In Stock">
+				</div>
+			</div>
+			<div class="product">
+				<div class="product-data">
+					<img src="images/tennis.png" class="product-image">
+					<a href="#"><h2 class="product-title">Tennis</h2></a>
+					<p>
+						$<span class="product-price">100</span>
+					</p>
+					<input type="button" data-productId="105" class="add-to-cart" value="Add To Cart">
+				</div>
+				<div class="product-meta">
+					<input type="button" class="product-availability in-stock" value="In Stock">
+				</div>
+			</div>
+		</div>
+		<div id="cart"></div>
+	</div>	
+	
+</body>
+</html>

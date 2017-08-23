@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+
+<div id="result">
+	<table id="table"></table>
+	<input type="button" id="clickme" value="click me">
+</div>
+
+	<div id="container">
+<br>
+<select id="select" name="abc">
+<option value="Value for Item 1">brand1</option>
+<option value="Value for Item 2">brand2</option>
+<option value="Value for Item 3">brand3</option>
+</select>
+<select id="select1" name="abcd">
+<option value="os1">Android</option>
+<option value="os2">iOS</option>
+<option value="os3">Miicrosoft</option>
+</select>
+</div>
+
+<script type="text/javascript" src="jquery-3.2.1.min.js" src="a1.js"></script>
+<script>
+$(document).ready(function(){
+	$('#result').on('click','#clickme'
+		function(){
+			console.log("submit it");
+		});
+
+	});
+</script>
+
+
+
+</body>
+</html>

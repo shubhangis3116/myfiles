@@ -1,0 +1,10 @@
+1. make menu bar background black and menu items white.
+2. on hover menu item background color changes to green.
+3. change background color of second <p> tag to #00bfff.
+4. change background color of span tag with class highlight to yellow.
+5. change font-style italics to last span tag in content section.
+6. change font-size 16px to every span tag inside <p> tag. 
+7. change font-weight bold every last span tag inside <p> tag.
+8. give margin bottom 20px to all div with class widget.
+9. make font-weight bold and text-decoration none to links in footer.
+10. make font-size 16px to footer copyright <p> tag.
