@@ -14,6 +14,7 @@ while($stmt->fetch())
 <!DOCTYPE html>
 <html>
 <head>
+<!-- hh -->
 	<title>
 		Products
 	</title>
@@ -59,6 +60,7 @@ while($stmt->fetch())
 	</div>
 	<div id="show">
 	</div>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 
