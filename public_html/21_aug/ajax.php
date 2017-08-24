@@ -116,10 +116,6 @@ if(isset($_POST['valueid'])){
 	  		sort($cart); 
 			$_SESSION["cart"] = $cart;
 			echo json_encode(array('cart'=>$_SESSION["cart"]));
-			
-			
-
-			
 		}
 	}  	
 }
