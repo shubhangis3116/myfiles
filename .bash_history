@@ -106,3 +106,73 @@ git push
 git add .
 git commit -m "products are being added in db and can be shown in table"
 git push
+get init
+git init
+git add .
+git commit -m "delete working"
+git push -u origin master
+git status
+git add .
+git commit -m "delete working"
+git add .
+git commit -m "delete working"
+git push
+cd..
+cd
+cd public_html
+cd store
+cd Admin
+git add .
+git commit -m "delete working"
+git push
+git status
+git add .
+git commit -m "edit is working"
+git push
+git status
+git add .
+git commit -m "pagination with page no."
+git push
+git add .
+git commit -m "ignore"
+git push
+.gitignore
+touch .gitignore
+git add .
+git commit -m "abc"
+git push
+git add .
+git commit -m "made category"
+git push
+get init
+git init
+git add .
+cd
+cd..
+cd
+cd public_html
+cd store
+git add .
+git commit -m "categories added"
+git push
+cd Admin
+git push
+git add .
+git commit -m "category module-added category through database"
+git push
+git add .
+git commit -m "category module-products are added to database through form"
+git push
+git add .
+git commit -m "category module-category table is shown"
+git push
+git add .
+git commit -m "category module-added delete functionality"
+git push
+git add .
+git commit -m "del"
+git push
+git status
+git add .
+git commit -m "category module-pagination done"
+git push
